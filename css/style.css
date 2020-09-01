@@ -1,0 +1,153 @@
+:root {
+    --primary: hsl(200, 56%, 90%);
+}
+
+body {
+    background-color: silver;
+    margin: 0;
+    padding: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+header {
+    background-color: ghostwhite;;
+    border: 1px solid black;
+margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+header > h1 {
+
+    color: darkgrey;
+    letter-spacing: 5px;
+    font-size: 90px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+display: block;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 20px;
+    font-size: 25px;
+}
+
+nav {
+    justify-items: space-around;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    background: black;
+    margin-top: 0px;
+}
+
+a:hover {
+    background-color: grey;
+
+}
+#starter{
+
+}
+img{
+ height: auto;
+    width: 100%;
+}
+
+template{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,min-max(300px, 1fr);
+}
+main h1 {
+    border: 4px dotted yellow;
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+    font-family: cursive;
+    color: antiquewhite;
+}
+h2 {
+    color: white;
+    padding: 0px;
+    margin-top: 5px;
+    background-color: gray;
+    text-align: center;
+    font-size: 35px;
+    width: 200px;
+    border-radius: 25% 0;
+    text-transform: capitalize;
+}
+
+/*hidden {
+    display: none;
+}*/
+
+
+
+article.product {
+    -webkit-box-shadow: -2px 17px 25px -12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -2px 17px 25px -12px rgba(0, 0, 0, 1);
+    box-shadow: -2px 17px 25px -12px rgba(0, 0, 0, 1);
+    border-radius: 90px 0px;
+    background-color: lightcyan;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.price {
+    border: 1px dotted black;
+    width: 20%;
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    margin-top: 0;
+}
+
+/**/
+footer {
+    height: 60px;
+    border: 2px solid white;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+footer > p {
+    padding-top: 20px;
+    margin: 0;
+
+}
+/*.hide {
+  display: none;*/
+/*}
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}*/
