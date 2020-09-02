@@ -33,3 +33,11 @@ function createNavigation(catagories){
 
     document.querySelector("nav").appendChild(a);
 })}
+//clone modal when clicked
+
+
+
+
+
+
+

@@ -83,14 +83,28 @@ copy.querySelector(".full_name").textContent=myProduct.name;
     if(myProduct.category==myProduct.category){
         const parentElem=document.querySelector("section#"+myProduct.category);
 
+copy.querySelector("button").addEventListener("click",()=>{
+    fetch('https://kea-alt-del.dk/t5/api/product?id='+myProduct.id)
+    .then(res=>res.json())
+    .then(showDetails);
+})
 
-
-
+        const img=copy.querySelector(".productImage");
+img.setAttribute("src",'https://kea-alt-del.dk/t5/site/imgs/medium/' + myProduct.id
+                 +'-md.jpg')
     const pasting = document.querySelector("section#"+myProduct.category);
     pasting.appendChild(copy);
 
 
     }
+}
+const modal= document.querySelector(".modal-background");
+function showDetails(data){
+    modal.querySelector(".modal-name").textContent.data.name;
+    modal.querySelector(".modal-description").textContent=data.longdescription;
+
+    modal.classList.remove("hide");
+    modal.classList.remove("hide");
 }
 
 
@@ -104,3 +118,11 @@ function veggiFilterClicked(){
                      elem.classList.add("hidden");
                      })
 }
+
+
+
+
+modal.addEventListener("click",()=>{
+    modal.classList.add("hide");
+})
+
