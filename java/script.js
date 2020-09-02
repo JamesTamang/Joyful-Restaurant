@@ -72,20 +72,26 @@ copy.querySelector(".full_name").textContent=myProduct.name;
 
 
  copy.querySelector(".price").textContent=myProduct.price;
-    copy.querySelector(".full_name").textContent=myProduct.name;
-    if(myProduct.category=="main"){
-        const parentElem=document.querySelector("section#"+myProduct.category)
-    }
 
 
-    if(!myProduct.discount){
+
+
+    if (myProduct.discount){
  copy.querySelector(".discountp").classList.add("hidden");
     }
-    const pasting=document.querySelector("section#starter");
-    pasting.appendChild(copy)
+copy.querySelector(".full_name").textContent=myProduct.name;
+    if(myProduct.category==myProduct.category){
+        const parentElem=document.querySelector("section#"+myProduct.category);
+
+
+
+
+    const pasting = document.querySelector("section#"+myProduct.category);
+    pasting.appendChild(copy);
+
+
+    }
 }
-
-
 
 
 const veggifilter= document.querySelector("#veggifilter");
