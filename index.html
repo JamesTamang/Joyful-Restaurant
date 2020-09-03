@@ -10,17 +10,17 @@
 </head>
 
 <body>
-
-    <header>
+    <div class="page1">
+ <header>
         <h1>HOTEL JOYFUL</h1>
     </header>
-    <nav>*p</nav>
+    <nav></nav>
     <details>
         <summary>Filters</summary>
         <button id="veggifilter">Veggi dishes</button>
     </details>
 
-
+    </div>
     <main class="productList">
         <template id="productTemplate">
         <article class="product">
@@ -30,9 +30,10 @@
                 <h3 class="full_name">Names: Caviar bruschetta </h3>
                 <p id="full">Description: Brushcetta med russisk Caviar.. <br><br>
                     Full description:-Til denne dejlige Bruschetta anvender vi kun de dejligste sibiriske Caviar. Caviarerne presses ud af fiskene mens de stadig er levende, og vædes derefter i Putinka Vodka. Der er masser af bjerggedesmør på bruschettaene.</p>
-                <h4 class="soldout">SoldOut</h4>
                 <h4 class="price">Price: 49/-</h4>
-                <h4 class="discountp">Discount:</h4>
+              <div class="dispri">
+              <p>Discount:- </p>
+                  <h4 class="discountp">Discount:</h4></div>
               <button id="but">
                     More</button>
             </section>
@@ -48,12 +49,12 @@
     <div class="modal-background hide">
   <div class="modal-content">
     <h3 class="modal-name">NAME</h3>
-    <img src="" alt="" class="modal-image" />
+    <img class="modal-image" src="" alt=""  />
     <p class="modal-description">LONG DESCRIPTION</p>
     <h4 class="modal-price">PRICE</h4>
   </div>
 </div>
 
 
-   <script src="java/script.js"></script>
+   <script src="js/script.js"></script>
 </body></html>

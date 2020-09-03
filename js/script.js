@@ -75,6 +75,7 @@ function showProduct(myProduct) {
         copy.querySelector("article").appendChild(p)
 
     }
+    copy.querySelector("div .discountp").textContent = myProduct.discount + "%";
         if (!myProduct.discount) {
  copy.querySelector(".discountp").classList.add("hidden")
     }
@@ -106,12 +107,14 @@ const article = copy.querySelector("article");
 
 
 
-}
+
 const modal = document.querySelector(".modal-background");
 
 function showDetails(data) {
     modal.querySelector(".modal-name").textContent=data.name;
     modal.querySelector(".modal-description").textContent = data.longdescription;
+   modal.querySelector(".modal-price").textContent = data.price;
+
     modal.classList.remove("hide");
 }
 
@@ -133,3 +136,4 @@ function veggiFilterClicked() {
 modal.addEventListener("click", () => {
     modal.classList.add("hide");
 })
+}
