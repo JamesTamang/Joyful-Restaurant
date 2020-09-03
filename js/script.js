@@ -69,15 +69,15 @@ function showProduct(myProduct) {
 
 
     if (myProduct.soldout) {
-      const p=document.createElement("p");
-        p.textContent="Sold Out";
+        const p = document.createElement("p");
+        p.textContent = "Sold Out";
         p.classList.add("soldout");
         copy.querySelector("article").appendChild(p)
 
     }
     copy.querySelector("div .discountp").textContent = myProduct.discount + "%";
-        if (!myProduct.discount) {
- copy.querySelector(".discountp").classList.add("hidden")
+    if (!myProduct.discount) {
+        copy.querySelector(".discountp").classList.add("hidden")
     }
 
 
@@ -85,40 +85,33 @@ function showProduct(myProduct) {
         const parentElem = document.querySelector("section#" + myProduct.category);
     }
 
-const article = copy.querySelector("article");
+    const article = copy.querySelector("article");
 
     if (myProduct.vegetarian) {
         article.classList.add("vegetarian");
     }
 
     copy.querySelector(".full_name").textContent = myProduct.name;
+    copy.querySelector(".short-des").textContent=myProduct.shortdescription;
 
-//buttin
- copy.querySelector("#but").addEventListener("click", () => {
-            fetch(`https://kea-alt-del.dk/t5/api/product?id=` + myProduct.id)
-                .then(res => res.json())
-                .then(showDetails);
-        });
+    //buttin
+    copy.querySelector(".but").addEventListener("click", () => {
+        fetch(`https://kea-alt-del.dk/t5/api/product?id=` + myProduct.id)
+            .then(res => res.json())
+            .then(showDetails);
+    });
     const parentElem = document.querySelector("section#" + myProduct.category);
     parentElem.appendChild(copy)
-
-
-
-
-
-
-
+}
 const modal = document.querySelector(".modal-background");
 
 function showDetails(data) {
-    modal.querySelector(".modal-name").textContent=data.name;
+    modal.querySelector(".modal-name").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.longdescription;
-   modal.querySelector(".modal-price").textContent = data.price;
+    modal.querySelector(".modal-price").textContent = data.price;
 
     modal.classList.remove("hide");
 }
-
-
 const veggifilter = document.querySelector("#veggifilter");
 
 veggifilter.addEventListener("click", veggiFilterClicked);
@@ -136,4 +129,3 @@ function veggiFilterClicked() {
 modal.addEventListener("click", () => {
     modal.classList.add("hide");
 })
-}
