@@ -75,9 +75,10 @@ function showProduct(myProduct) {
         copy.querySelector("article").appendChild(p)
 
     }
-    copy.querySelector("div .discountp").textContent = myProduct.discount + "%";
+ copy.querySelector("div .discountp").textContent = myProduct.discount + "%";
     if (!myProduct.discount) {
-        copy.querySelector(".discountp").classList.add("hidden")
+        copy.querySelector(".discountp").classList.add(".hidden");
+
     }
 
 
@@ -107,11 +108,14 @@ const modal = document.querySelector(".modal-background");
 
 function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
-    modal.querySelector(".modal-description").textContent = data.longdescription;
-    modal.querySelector(".modal-price").textContent = data.price;
+    modal.querySelector(".modal-description").textContent ="Description: " + data.longdescription;
+    modal.querySelector(".modal-price").textContent ="Price: "+ data.price;
 
     modal.classList.remove("hide");
 }
+
+
+
 const veggifilter = document.querySelector("#veggifilter");
 
 veggifilter.addEventListener("click", veggiFilterClicked);

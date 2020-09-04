@@ -1,6 +1,28 @@
+@font-face {
+    src: url(fonts/OldStandardTT-Bold.ttf);
+    font-family:osb;
+}
+@font-face {
+    src: url(fonts/MAGNETOB.TTF);
+    font-family:cur;
+}
+@font-face {
+    src: url(fonts/berkshireSwash-Regular.ttf);
+    font-family:lightcur;
+}
+@font-face {
+    src: url(fonts/COOPBL.TTF);
+    font-family:boldcur;
+}
+@font-face {
+    src: url(fonts/LATINWD.TTF);
+    font-family:boldart;
+}
 :root {
     --primary: hsl(200, 56%, 90%);
+
 }
+
 
 body {
     background-image: url(image/bg.jpg);
@@ -18,22 +40,53 @@ body {
 }
 
 header {
+    display: flex;
     background-color: rgba(0 ,0 ,0 ,.70);
     border: 1px solid black;
 margin: 0;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     padding: 0;
-    height: 11vh;
-}
 
+}
+.logo{
+    height: 100%;
+   border-radius: 20%;
+    max-width: 200px;
+    padding: 0;
+
+}
 header > h1 {
 background-color: rgba(1);
     color: white;
-    font-size: 90px;
+    font-size: 3.5rem;
     padding: 0;
-    margin: 0;
+    margin-right: 20%;;
+        font-family:lightcur;
+    letter-spacing: 10px;
+
+}
+
+.info > h2{
+    background: none;
+    font-size: 55px;
+    color: aliceblue;
+    font-style: oblique;
+    text-decoration: underline;
+    margin-top: 150px;
+}
+.para > p{
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+     background-color: rgba(0 ,0 ,0 ,.30);
+    border-radius: 50%;
+
+
+}
+.para :nth-child(1){
+margin-top: 150px;
 }
 
 nav a {
@@ -42,7 +95,7 @@ nav a {
     text-transform: capitalize;
     display: inline-block;
     margin: 20px;
-    font-size: 35px;
+    font-size: 3vw;;
 }
 div > nav {
     background-color: rgba(0, 100, 100, .56);
@@ -50,9 +103,9 @@ div > nav {
     text-align: center;
 }
 .discountp{
-    font-size: 25px;
+    font-size: 35px;
     margin: 0;
-    color: white;
+    color: yellow;
 
 }
 
@@ -75,8 +128,8 @@ img{
 
 main > section{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px , 1fr));
-    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    grid-gap: 4rem;
     margin: 40px;
 }
 
@@ -88,7 +141,7 @@ h2 {
     background-color: gray;
     text-align: center;
     font-size: 40px;
-
+    font-family:boldcur;
     border-radius: 25%;
     text-transform: capitalize;
 
@@ -108,10 +161,22 @@ h4{
     display: grid;
 
 }
+.menu{
+     background-color: rgba(0 ,0 ,0 ,.30);
+    font-size: 5vw;
+    text-align: center;
+    font-family: boldcur;
+    color: white;
+    margin: 0;
+
+}
+
+
 p{
    padding-top: 5px;
     font-size: 20px;
     margin-left: 20px;
+     font-family:lightcur;
 }
 main.productList > section > h2 {
   grid-column: 1/-1;
@@ -141,10 +206,16 @@ font-family: inherit;
 
 article.product {
 box-shadow: 13px 16px 15px -14px rgba(0,0,0,0.77);
+
     border-radius: 30px;
     position: relative;
     background-color: silver;
     border: 2px solid black;
+    transition: .5s;
+
+}
+article.product:hover{
+    transform: scale(1.05);
 
 }
 
@@ -166,12 +237,21 @@ html{
     background-color: black;
     color: white;
     font-size: 20px;
-    width: 95%;
+    width: 90%;
     margin: 10px;
     border-radius: 10px;
     height: 40px;
     margin-bottom: 4px;
+     font-family:boldcur;
 
+
+}
+.but:hover{
+    transform: scale(1.08);
+    width: 80%;
+    background-color: aliceblue;
+    color: black;
+    margin-left: 5%;
 }
 
 .dispri{
@@ -182,19 +262,27 @@ html{
 
 /**/
 footer {
-    height: 60px;
+    height: 30vh;
     border: 2px solid white;
     background-color: aliceblue;
-    border-radius: 10px;
+     background-color: rgba(0 ,0 ,0 ,.70);
+    color: white;
+    text-align: center;
+
+    margin-top:
 }
 
 footer > p {
     padding-top: 20px;
     margin: 0;
+    justify-content: space-around;
+    margin-top: 50px;
 
 }
 .hide {
   display: none;
+    transition: 1s;
+    transform-style: preserve-3d;
 }
 .modal-background {
   position: fixed;
@@ -222,4 +310,37 @@ background-image: url(image/bg1.jpg);
     background-position: center;
     background-size: cover;
    flex-direction: column;
+    border-bottom: 2px solid white;
+}
+
+.old{
+    text-decoration: line-through;
+    color: red;
+}
+.modal-content{
+    background-image: url(https://cdn.pixabay.com/photo/2017/10/22/21/02/food-2879265_1280.jpg) ;
+    background-size: cover;
+    background-position: center;
+
+
+}
+.modal-description{
+         background-color: rgba(255 ,255 ,0 ,.15);
+    margin: 0 10% ;
+}
+.modal-name {
+    font-size: 45px;
+}
+
+.modal-price {
+    font-size: 30px;
+    margin-left: 15%;
+    padding: 0;
+    color: green;;
+
+}
+@media screen and (min-width: 480px){
+    .info > h1 {
+        font-size: 5px;
+    }
 }
