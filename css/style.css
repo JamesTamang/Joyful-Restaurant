@@ -187,7 +187,7 @@ main.productList{
 }
 
 
-hidden {
+.hidden {
     display: none;
 }
 .soldout{
@@ -243,8 +243,13 @@ html{
     height: 40px;
     margin-bottom: 4px;
      font-family:boldcur;
-
-
+}
+#veggifilter{
+    margin: 15px;
+}
+summary{
+    color: white;
+    font-size: 20px;
 }
 .but:hover{
     transform: scale(1.08);
@@ -258,7 +263,10 @@ html{
     display: flex;
     justify-content: space-between;
 }
-
+button.active{
+    background-color: aqua;
+    color: black;
+}
 
 /**/
 footer {
@@ -281,8 +289,7 @@ footer > p {
 }
 .hide {
   display: none;
-    transition: 1s;
-    transform-style: preserve-3d;
+
 }
 .modal-background {
   position: fixed;
@@ -338,6 +345,12 @@ background-image: url(image/bg1.jpg);
     padding: 0;
     color: green;;
 
+}
+img.vegetarian {
+
+    height: 42px;
+    width: 100px;
+    background-repeat: repeat-x;
 }
 @media screen and (min-width: 480px){
     .info > h1 {

@@ -65,6 +65,14 @@ function showProduct(myProduct) {
     const img = copy.querySelector(".productImage");
     img.setAttribute("src", `https://kea-alt-del.dk/t5/site/imgs/medium/${myProduct.image}-md.jpg`)
 
+     if (!myProduct.discount) {
+        copy.querySelector(".discountp").classList.add("hidden")
+    }
+
+
+    if (myProduct.vegetarian) {
+        copy.querySelector(".vegetarian").classList.remove("hidden");
+    }
 
 
 
@@ -75,25 +83,32 @@ function showProduct(myProduct) {
         copy.querySelector("article").appendChild(p)
 
     }
- copy.querySelector("div .discountp").textContent = myProduct.discount + "%";
-    if (!myProduct.discount) {
-        copy.querySelector(".discountp").classList.add(".hidden");
-
-    }
-
 
     if (myProduct.category == myProduct.category) {
-        const parentElem = document.querySelector("section#" + myProduct.category);
+        const parentElem = document.querySelector("section#" + myProduct.category)
     }
 
-    const article = copy.querySelector("article");
+
+
+    copy.querySelector("div .discountp").textContent = myProduct.discount + "%";
+
+
+
+
+   const article = copy.querySelector("article");
+
 
     if (myProduct.vegetarian) {
-        article.classList.add("vegetarian");
+        article.classList.add("vegetarian")
+    }
+    if (myProduct.alcohol) {
+        article.classList.add("alcoholic")
     }
 
+
+
     copy.querySelector(".full_name").textContent = myProduct.name;
-    copy.querySelector(".short-des").textContent=myProduct.shortdescription;
+    copy.querySelector(".short-des").textContent = myProduct.shortdescription;
 
     //buttin
     copy.querySelector(".but").addEventListener("click", () => {
@@ -108,8 +123,8 @@ const modal = document.querySelector(".modal-background");
 
 function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
-    modal.querySelector(".modal-description").textContent ="Description: " + data.longdescription;
-    modal.querySelector(".modal-price").textContent ="Price: "+ data.price;
+    modal.querySelector(".modal-description").textContent = "Description: " + data.longdescription;
+    modal.querySelector(".modal-price").textContent = "Price: " + data.price;
 
     modal.classList.remove("hide");
 }
@@ -121,15 +136,27 @@ const veggifilter = document.querySelector("#veggifilter");
 veggifilter.addEventListener("click", veggiFilterClicked);
 
 function veggiFilterClicked() {
+    veggifilter.classList.toggle("active")
     const articles = document.querySelectorAll("article:not(.vegetarian)");
     articles.forEach(elem => {
-        elem.classList.toggle("hidden");
+        elem.classList.toggle("hidden")
     })
 }
 
+const alcoholfilter = document.querySelector("#alcohol");
+alcoholfilter.addEventListener("click", alcoholFilterClicked);
 
+function alcoholFilterClicked() {
+    alcoholfilter.classList.toggle("active")
 
+    const articles = document.querySelectorAll("article.alcoholic");
 
-modal.addEventListener("click", () => {
-    modal.classList.add("hide");
-})
+    articles.forEach(elem => {
+        elem.classList.toggle("hidden")
+    })
+
+}
+    modal.addEventListener("click", () => {
+        modal.classList.add("hide");
+    })
+
