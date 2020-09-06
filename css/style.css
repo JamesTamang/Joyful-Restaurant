@@ -346,8 +346,55 @@ img.vegetarian {
     width: 100px;
     background-repeat: repeat-x;
 }
-@media screen and (min-width: 480px){
-    .info > h1 {
-        font-size: 5px;
+@media screen and (max-width: 400px){
+    header > h1 {
+ justify-content: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        padding: 0;
+        margin-top: 0;
+    }
+    .info>h2{
+     font-size: 36px;
+        background-color: rgba(0,0,0,.56);
+    }
+    .logo{
+    height: 90%;
+   border-radius: 20%;
+    max-width:80px;
+    padding: 0;
+
+}
+    main>section{
+        margin: 0;
+    }
+ main.productList{
+    padding: 0;
+     margin-left: 0;
+
+}
+    h2{
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+    }
+    article.product{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 5px;
+    font-size: 17px;
+}
+    div > nav {
+      height: 40px;
+        padding: 0;
+        margin: 0;
+
     }
 }
