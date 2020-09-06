@@ -6,10 +6,12 @@
     src: url(fonts/MAGNETOB.TTF);
     font-family:cur;
 }
+
 @font-face {
     src: url(fonts/BerkshireSwash-Regular.ttf);
     font-family:lightcur;
 }
+
 @font-face {
     src: url(fonts/COOPBL.TTF);
     font-family:boldcur;
