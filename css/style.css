@@ -125,7 +125,7 @@ img{
 
 main > section{
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    grid-template-columns: repeat(auto-fill , minmax(320px , 1fr));
     grid-gap: 4rem;
     margin: 40px;
 }
@@ -356,21 +356,22 @@ img.vegetarian {
         padding: 0;
         margin-top: 0;
     }
-    .info>h2{
+    .info > h2{
      font-size: 36px;
         background-color: rgba(0,0,0,.56);
     }
-    .logo{
+    img .logo{
     height: 90%;
    border-radius: 20%;
     max-width:80px;
     padding: 0;
+        margin: 0;
 
 }
-    main>section{
+    main > section{
         margin: 0;
     }
- main.productList{
+ main.productList {
     padding: 0;
      margin-left: 0;
 
